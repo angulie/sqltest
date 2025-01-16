@@ -50,7 +50,6 @@ spec:
     targetPort: 3306
     nodePort: 30036  # Choose a port in the 30000-32767 range
   type: NodePort  # This exposes the service on a node port
-  clusterIP: None  # For headless service, so pods can connect directly
 
 ---
 apiVersion: v1
