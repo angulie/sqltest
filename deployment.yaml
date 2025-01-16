@@ -58,6 +58,7 @@ metadata:
   name: mysql-pvc
   namespace: mysql
 spec:
+  storageClassName: standard-rwo
   accessModes:
     - ReadWriteOnce
   resources:
