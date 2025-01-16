@@ -49,8 +49,23 @@ spec:
     port: 3306
     targetPort: 3306
 #    nodePort: 30036  # Choose a port in the 30000-32767 range
-  type: Loadbalancer  # This exposes the service on a node port
+  type: NodePort  # This exposes the service on a node port
 
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql-service-load
+  namespace: dify
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 3306
+      targetPort: 3306
+      protocol: TCP
+      name: mysql-service-load
+  selector:
+    app: mysql
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
