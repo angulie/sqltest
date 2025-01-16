@@ -48,8 +48,8 @@ spec:
   - protocol: TCP
     port: 3306
     targetPort: 3306
-    nodePort: 30036  # Choose a port in the 30000-32767 range
-  type: NodePort  # This exposes the service on a node port
+#    nodePort: 30036  # Choose a port in the 30000-32767 range
+  type: Loadbalancer  # This exposes the service on a node port
 
 ---
 apiVersion: v1
