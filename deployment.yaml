@@ -56,7 +56,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mysql-service-load
-  namespace: dify
+  namespace: mysql
 spec:
   type: LoadBalancer
   ports:
